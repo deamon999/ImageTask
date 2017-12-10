@@ -131,10 +131,9 @@ public class ImageComparison {
                 }
             }
 
-        int lowerLeftCorner = expandArea(x1, y1, x2, y2, area); //x1 - n, y2 || x1 + n, y2
-        int upperRightCorner = expandArea(x2, y2, x1, y1, area); // x2 + n, y1 || x2 - n, y1
-//        expandArea(lowerLeftCorner,y1,x2,y2,areaId); //useless, right lower corner draw in draw border method
-        expandArea(upperRightCorner, y2, lowerLeftCorner, y1, area); //two points for draw border method
+        int lowerLeftCorner = expandArea(x1, y1, x2, y2, area);
+        int upperRightCorner = expandArea(x2, y2, x1, y1, area);
+        expandArea(upperRightCorner, y2, lowerLeftCorner, y1, area);
 
     }
 
